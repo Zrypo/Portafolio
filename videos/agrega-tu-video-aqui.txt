@@ -1,0 +1,10 @@
+Cuando tengas tu video de presentación:
+
+1. Guarda el archivo aquí, por ejemplo: tu-video.mp4
+2. Abre index.html y busca la sección MULTIMEDIA (id="multimedia")
+3. Sigue las instrucciones del comentario HTML que está ahí: descomenta
+   la opción A (video propio) o la opción B (YouTube embebido)
+4. Borra este archivo .txt si ya no lo necesitas
+
+Formato recomendado para video propio: .mp4 (códec H.264), peso ligero
+para que cargue rápido en la página.

@@ -1,0 +1,8 @@
+Espacio reservado para documentos descargables (por ejemplo, tu CV en PDF).
+
+Si agregas un archivo aquí, por ejemplo cv-david-rey.pdf, puedes enlazarlo
+desde index.html así:
+
+<a class="boton boton-secundario" href="documentos/cv-david-rey.pdf" download>
+    Descargar CV
+</a>

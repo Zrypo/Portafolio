@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>David Rey — Portafolio</title>
+
+    <!-- Tipografías de Google (necesitan internet; sin conexión se usa Arial) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+
+    <!-- 1. Bootstrap (guardado en la carpeta css, funciona sin internet) -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- 2. Nuestros estilos (van después para poder cambiar los colores de Bootstrap) -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ===== ENCABEZADO Y NAVEGACIÓN ===== -->
+    <header class="encabezado sticky-top">
+        <!-- navbar-expand-lg: desde 992px el menú se ve completo; en pantallas más chicas se esconde detrás del botón -->
+        <nav class="navbar navbar-expand-lg navegacion" data-bs-theme="dark">
+            <div class="container">
+
+                <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="#inicio">
+                    <img class="logito" src="imagenes/logo.png" alt="Logo de David Rey">
+                    <span class="logo">DAVID<span> REY</span></span>
+                </a>
+
+                <!-- Botón de las 3 rayitas: solo aparece en celular y tablet -->
+                <button class="boton-menu navbar-toggler" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#menu-principal"
+                        aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú: se despliega al tocar el botón (collapse); en pantalla grande se ve siempre -->
+                <div class="collapse navbar-collapse" id="menu-principal">
+                    <ul class="navbar-nav ms-auto gap-lg-3">
+                        <li class="nav-item"><a class="nav-link enlace" href="#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link enlace" href="#sobre-mi">Sobre mí</a></li>
+                        <li class="nav-item"><a class="nav-link enlace" href="#proyectos">Proyectos</a></li>
+                        <li class="nav-item"><a class="nav-link enlace" href="#galeria">Galería</a></li>
+                        <li class="nav-item"><a class="nav-link enlace" href="#multimedia">Multimedia</a></li>
+                        <li class="nav-item"><a class="nav-link enlace" href="#contacto">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link enlace" href="paginas/contacto.html">Página de contacto</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ===== INICIO ===== -->
+        <!-- row = fila | col-md-7 y col-md-5 = 7 y 5 de 12 columnas en pantallas medianas; en celular se apilan -->
+        <section class="inicio" id="inicio">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-md-7">
+                        <span class="etiqueta">PORTAFOLIO — DISEÑO &amp; DESARROLLO</span>
+                        <h1 class="display-4 mt-2">David Rey<em>De la marca al código.</em></h1>
+                        <p class="mt-3">
+                            Diseñador gráfico y técnico en multimedia, en transición hacia el desarrollo
+                            de software. Combino identidad visual, ilustración y lógica de programación.
+                        </p>
+
+                        <div class="row mt-4 pt-3 border-top border-secondary">
+                            <div class="col-sm-4">
+                                <h4 class="dato-titulo">ROL</h4>
+                                <p class="dato-valor">Diseño y Front-End</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <h4 class="dato-titulo">STACK</h4>
+                                <p class="dato-valor">HTML, CSS, JavaScript, Java, React</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <h4 class="dato-titulo">FORMACIÓN</h4>
+                                <p class="dato-valor">SENA (ADS) · Oracle ONE</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5">
+                        <figure class="m-0">
+                            <img class="foto-perfil img-fluid" src="imagenes/perfil.jpg" alt="Foto de David Rey">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SOBRE MÍ ===== -->
+        <section class="seccion seccion-crema" id="sobre-mi">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-md-6">
+                        <span class="etiqueta">EL PERFIL</span>
+                        <h2 class="mt-2">Una base creativa, ahora aplicada a construir software.</h2>
+                    </div>
+                    <div class="col-md-6">
+                        <p>
+                            Empecé la técnica de diseño multimedia, donde aprendí a pensar en identidad,
+                            jerarquía visual y comunicación. Hoy estoy completando el programa de Análisis
+                            y Desarrollo de Software (ADS) en el SENA, complementándola con la formación de
+                            Oracle Next Education (ONE) en las tecnologías Java, React, HTML, CSS y JavaScript.
+                        </p>
+                        <p>
+                            Esa combinación es mi diferencial: no solo escribo el código de una interfaz,
+                            también entiendo por qué se ve y se siente de una manera determinada.
+                        </p>
+                        <p class="cita">
+                            El reto no es solo que la página funcione. Es que funcione y se sienta propia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROYECTOS ===== -->
+        <!-- row-cols-md-2 = 2 tarjetas por fila en pantallas medianas | h-100 = misma altura -->
+        <section class="seccion" id="proyectos">
+            <div class="container">
+                <span class="etiqueta">PROYECTOS — GITHUB</span>
+                <h2 class="mt-2 mb-4">Cosas que he construido</h2>
+
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+
+                    <div class="col">
+                        <article class="tarjeta card h-100">
+                            <img class="card-img-top" src="imagenes/proyecto-encriptador.png" alt="Captura de Challenge Encriptado">
+                            <div class="card-body d-flex flex-column gap-2">
+                                <h3>Challenge Encriptado</h3>
+                                <p>
+                                    Aplicación web que encripta y desencripta mensajes de texto
+                                    reemplazando las vocales por combinaciones de letras.
+                                </p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="etiqueta-tecnologia badge rounded-pill">HTML</span>
+                                    <span class="etiqueta-tecnologia badge rounded-pill">CSS</span>
+                                    <span class="etiqueta-tecnologia badge rounded-pill">JavaScript</span>
+                                </div>
+                                <div class="mt-auto pt-2 d-flex gap-2">
+                                    <a class="boton-primario btn btn-sm" href="https://github.com/Zrypo/challenge-encriptado" target="_blank" rel="noopener">Ver código</a>
+                                    <a class="boton-secundario btn btn-sm" href="https://zrypo.github.io/challenge-encriptado/" target="_blank" rel="noopener">Ver demo</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="tarjeta card h-100">
+                            <img class="card-img-top" src="imagenes/proyecto-clima.png" alt="Captura de Weather App">
+                            <div class="card-body d-flex flex-column gap-2">
+                                <h3>Weather App</h3>
+                                <p>
+                                    Aplicación del clima que muestra temperatura, humedad y viento de
+                                    la ciudad que el usuario busque, con aviso si no la encuentra.
+                                </p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="etiqueta-tecnologia badge rounded-pill">HTML</span>
+                                    <span class="etiqueta-tecnologia badge rounded-pill">CSS</span>
+                                    <span class="etiqueta-tecnologia badge rounded-pill">JavaScript</span>
+                                    <span class="etiqueta-tecnologia badge rounded-pill">API</span>
+                                </div>
+                                <div class="mt-auto pt-2 d-flex gap-2">
+                                    <a class="boton-primario btn btn-sm" href="https://github.com/Zrypo/Whather-app" target="_blank" rel="noopener">Ver código</a>
+                                    <a class="boton-secundario btn btn-sm" href="https://zrypo.github.io/Whather-app/" target="_blank" rel="noopener">Ver demo</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Para agregar otro proyecto: copia un bloque <div class="col"> completo y cambia los datos -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== GALERÍA ===== -->
+        <!-- row-cols-2 = 2 imágenes por fila en celular | row-cols-md-4 = 4 por fila en pantallas medianas -->
+        <section class="seccion seccion-crema" id="galeria">
+            <div class="container">
+                <span class="etiqueta">GALERÍA</span>
+                <h2 class="mt-2 mb-4">Piezas de diseño e ilustración</h2>
+
+                <!-- Reemplaza las 4 imágenes de /imagenes por tus piezas y edita el figcaption -->
+                <div class="row row-cols-2 row-cols-md-4 g-3">
+                    <div class="col">
+                        <figure class="imagen-contenedor">
+                            <img class="imagen img-fluid" src="imagenes/img1.jpg" alt="Pieza de diseño 1">
+                            <figcaption>Oni ilustración</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <figure class="imagen-contenedor">
+                            <img class="imagen img-fluid" src="imagenes/img2.png" alt="Pieza de diseño 2">
+                            <figcaption>Pixel art</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <figure class="imagen-contenedor">
+                            <img class="imagen img-fluid" src="imagenes/img3.png" alt="Pieza de diseño 3">
+                            <figcaption>Ilusión óptica</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <figure class="imagen-contenedor">
+                            <img class="imagen img-fluid" src="imagenes/img4.jpg" alt="Pieza de diseño 4">
+                            <figcaption>Dibujo tradicional</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== MULTIMEDIA ===== -->
+        <section class="seccion" id="multimedia">
+            <div class="container">
+                <span class="etiqueta">MULTIMEDIA</span>
+                <h2 class="mt-2 mb-4">Video de presentación</h2>
+
+                <div class="marco-video">
+                   <p class="m-0">Espacio reservado para el video de presentación.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACTO ===== -->
+        <section class="seccion seccion-crema" id="contacto">
+            <div class="container">
+                <div class="row justify-content-center">
+
+                    <div class="col-md-10 col-lg-8">
+                        <div class="text-center">
+                            <span class="etiqueta">HABLEMOS</span>
+                            <h2 class="mt-2 mb-4">Escríbeme</h2>
+                        </div>
+
+                        <!-- Formulario solo con HTML5 (sin JavaScript). form-control, form-label, form-select, form-check = clases de Bootstrap -->
+                        <form class="formulario" action="#" method="post">
+
+                            <fieldset>
+                                <legend>Información personal</legend>
+
+                                <div class="mb-3">
+                                    <label class="form-label" for="nombre">Nombre</label>
+                                    <input class="form-control" type="text" id="nombre" name="nombre" minlength="2" maxlength="60" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label" for="correo">Correo</label>
+                                    <input class="form-control" type="email" id="correo" name="correo" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label" for="telefono">Teléfono (opcional)</label>
+                                    <input class="form-control" type="tel" id="telefono" name="telefono" pattern="[0-9+ ]{7,15}">
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Sobre el proyecto</legend>
+
+                                <div class="mb-3">
+                                    <label class="form-label" for="tipo-proyecto">Tipo de proyecto</label>
+                                    <select class="form-select" id="tipo-proyecto" name="tipo-proyecto" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="diseno">Diseño de marca / ilustración</option>
+                                        <option value="web">Desarrollo web</option>
+                                        <option value="ambos">Diseño y desarrollo</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label" for="fecha-contacto">Fecha estimada de inicio</label>
+                                    <input class="form-control" type="date" id="fecha-contacto" name="fecha-contacto">
+                                </div>
+
+                                <div class="mb-3">
+                                    <span class="form-label d-block">Preferencia de contacto</span>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="pref-correo" name="preferencia" value="correo" checked>
+                                        <label class="form-check-label" for="pref-correo">Correo</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="pref-telefono" name="preferencia" value="telefono">
+                                        <label class="form-check-label" for="pref-telefono">Teléfono</label>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label" for="mensaje">Mensaje</label>
+                                    <textarea class="form-control" id="mensaje" name="mensaje" rows="4" minlength="10" maxlength="500" required></textarea>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="aceptacion" name="aceptacion" required>
+                                    <label class="form-check-label" for="aceptacion">Acepto ser contactado sobre este mensaje</label>
+                                </div>
+                            </fieldset>
+
+                            <button class="boton-primario btn" type="submit">Enviar mensaje</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== BANNER DE CIERRE ===== -->
+        <section class="banner-cierre">
+            <div class="container">
+                <h2 class="mb-4">Un portafolio construido pieza por pieza, no al revés.</h2>
+                <a class="boton-primario btn" href="#contacto">Hablemos de tu proyecto</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== PIE DE PÁGINA ===== -->
+    <footer class="pie">
+        <div class="container">
+            <h3 class="h5 titulo-pie">Contacto directo</h3>
+            <ul class="list-unstyled d-flex flex-wrap gap-2 gap-md-4 mt-3 mb-4">
+                <li>Correo: <a href="mailto:david19647@gmail.com">david19647@gmail.com</a></li>
+                <li>GitHub: <a href="https://github.com/Zrypo" target="_blank" rel="noopener">github.com/Zrypo</a></li>
+                <li>Behance: <a href="https://www.behance.net/davidrey8" target="_blank" rel="noopener">behance.net/davidrey8</a></li>
+            </ul>
+            <p class="m-0 pt-3 border-top border-secondary">© 2026 David Rey — Portafolio de diseño y desarrollo</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript de Bootstrap: lo usa SOLO el menú desplegable. El formulario sigue siendo HTML5 puro. -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/menu.js"></script>
+
+</body>
+</html>
